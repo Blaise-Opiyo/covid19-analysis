@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.Stats-wrapper{
+    width: 90%;
+    height: 540px;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 20px 30px -2px
+    ;
+}
+
+/* STATISTICS TABLE */
+table{
+    width: 100%;
+    margin: 0 auto;
+    border-spacing: 0;
+    border: 1px solid rgba(239, 239, 245, 1);
+}
+th, tr, td{
+    border-bottom: 1px solid rgba(239, 239, 245, 1);
+    padding: 12px;
+    text-align: start;
+}
+th{
+    background-color: rgba(250, 250, 252, 1);
+}
+td{
+    color: rgb(51, 54, 57);
+    font-weight: 500;
+}
+tr:hover{
+    background-color: rgba(250, 250, 252, 1);
+}
+
+/* SEARCH INPUT */
+.Stats-wrapper form.search-country input{
+    cursor: pointer;
+    display: block;
+    width: 50%;
+    height: calc(24px + 12px + 2px);
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    outline: 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin: 6px 3.2px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.Stats-wrapper form.search-country input:hover{
+    border: 1px solid rgb(0,195,255);
+}
+.Stats-wrapper form.search-country input:focus{
+    box-shadow: rgb(204,229,255) 0px 0px 0px 3.2px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 832px){
+    .Stats-wrapper{
+        width: 100%;
+    }
+    table{
+        font-size: 14px;
+    }
+    .Stats-wrapper form.search-country input{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 762px){
+    table{
+        font-size: 12px;
+    }
+    .Stats-wrapper form.search-country input{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 618px){
+    .Stats-wrapper{
+        padding: 6px;
+        
+    }
+}
+@media screen and (max-width: 490px){
+    .res-hide{
+        display: none;
+    }
+}
+@media screen and (max-width: 396px){
+    table{
+        font-size: 10px;
+    }
+    .Stats-wrapper form.search-country input{
+        font-size: 11px;
+    }
+}

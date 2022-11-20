@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+.App{
+  background-color: rgb(245,245,245);
+}
+.Main-wrapper{
+  margin: 0 auto;
+  width: 80%;
+  height: fit-content;
+  height: -moz-fit-content;
+  /* border: 2px solid green; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* HEAD SECTION */
+.Main-wrapper .head{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.Main-wrapper .head .head-banner{
+  display: flex;
+  align-items: center;
+  color: #54c1f9;
+}
+.Main-wrapper .head .head-banner .banner{
+  width: 70px;
+  height: 70px;
+}
+.Main-wrapper .head .head-banner .banner img{
+  width: 100%;
+  height: 100%;
+}
+.Main-wrapper .head .head-banner .title-meta h2{
+  font-size: 30px;
+}
+.Main-wrapper .head .head-banner .title-meta h3{
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+/* GLOBAL OVERVIEW */
+.Main-wrapper .Global-overview .overview-title{
+  font-size: 20px;
+  margin: 30px 0px 15px 0;
+  line-height: 22px;
+  padding: 0;
+  padding-left: 10px;
+  border-left: 6px solid rgb(0, 195, 255);
+}
+.Main-wrapper .Global-overview .overview-details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.Main-wrapper .Global-overview .overview-details .tests{
+  background: rgb(209,236,241);
+}
+.Main-wrapper .Global-overview .overview-details .confirmed{
+  background: rgb(204,229,255);
+}
+.Main-wrapper .Global-overview .overview-details .recovered{
+  background: rgb(212,237,218);
+}
+.Main-wrapper .Global-overview .overview-details .deaths{
+  background: rgb(248,215,218);
+}
+.Main-wrapper .Global-overview .overview-details .cases-overview{
+  box-shadow: 0px 20px 30px -2px rgb(0 0 0 / 5%);
+  border-radius: 10px;
+  padding: 20px;
+  color: #252525;
+  width: 22%;
+  transition: all 3s;
+}
+.Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+  font-size: 16px;
+}
+.Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+  font-size: 24px;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* >>> MEDIA QUERIES <<< */
+@media screen and (max-width: 968px) {
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+    font-size: 22px;
   }
 }
+@media screen and (max-width: 920px) {
+  .Main-wrapper .Global-overview .overview-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview{
+    width: 80%;
+    justify-self: center;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 16px;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 744px){
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 580px){
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 14px;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 492px){
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 12px;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 440px){
+  .Main-wrapper .Global-overview .overview-details .cases-overview{
+    padding: 20px 6px;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-title{
+    font-size: 12px;
+  }
+  .Main-wrapper .Global-overview .overview-details .cases-overview .cases-numbers{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 402px){
+  .Main-wrapper .head .head-banner .banner{
+    width: 56px;
+    height: 56px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h2{
+    font-size: 26px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h3{
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 382px){
+  .Main-wrapper .Global-overview .overview-details .cases-overview{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 369px){
+  .Main-wrapper .head .head-banner .banner{
+    width: 48px;
+    height: 48px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h2{
+    font-size: 22px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h3{
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 369px){
+  .Main-wrapper .head .head-banner .banner{
+    width: 42px;
+    height: 42px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h2{
+    font-size: 18px;
+  }
+  .Main-wrapper .head .head-banner .title-meta h3{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 618px){
+  .Main-wrapper{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 520px){
+  .Main-wrapper{
+    width: 96%;
+  }
+}
+
